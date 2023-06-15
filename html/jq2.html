@@ -1,0 +1,41 @@
+<html>
+    <head>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            /* function f1()
+            {
+               console.log("hi Jquery")
+            } */
+            $(document).ready(function(){
+                console.log("hi")
+                
+                //handler for OK button click
+                $("#t1").click(function(){
+                    //console.log("button clicked")
+                   $("#p1").text("button clicked")
+                })
+
+                //handler for CLEAR button click
+                $("#t2").click(function (){
+                    $("#p1").text("") 
+                })
+
+                //handler for textfield
+                $("#t3").click(function(){
+                    let s= $(this).val()
+                    $("#p1").html("<i>"+s+"</i>")
+                })
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" id="t1" value="OK" />
+        <input type="button" id="t2" value="CLEAR" />
+        <input type="text" id="t3" />
+        <br>
+        <p id="p1" ></p>
+
+    </body>
+</html>

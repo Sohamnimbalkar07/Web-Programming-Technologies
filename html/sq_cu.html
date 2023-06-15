@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            function handler(choice)
+            {
+                let n=parseInt(document.getElementById("i1").value)
+                let result
+                switch(choice)
+                {
+                case "sq":
+                    result=n*n
+                break;
+                case "cu":
+                    result=n*n*n
+                break;
+                case "ShowAsitis":
+                    result=n
+                break;
+                case "default":
+                    result=0
+                break;
+            }
+            document.getElementById("p1").innerHTML= `<h1>${result}</h1>`
+            }
+        </script>
+    </head>
+
+    <div>
+        enter a number :<input type="number"   id="i1" />
+        <br>
+        square :<input type="radio"  onclick="handler('sq')" name="cal" />
+        <br>
+        cube :<input type="radio"  onclick="handler('cu')" name="cal" />
+        <br>
+        Show as it is :<input type="radio" onclick="handler('ShowAsitis')" name="cal"/>
+        <p id="p1"> </p>
+    </div>
+</html>

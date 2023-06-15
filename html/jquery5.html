@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>
+$().ready(()=>{
+        $("#c1").click(() =>{
+        let x = new Date()
+        let output= x.getHours()+":"+x.getMinutes()+":"+x.getSeconds()
+        $("#t1").val(output)
+
+    })
+})
+
+</script>
+</head>
+
+<body>
+        <input type="button" id="c1" value="click here" />
+        <input type="text" id="t1" value="click here" />
+</body>
+</html>
+

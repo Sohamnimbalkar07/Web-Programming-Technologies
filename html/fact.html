@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+     $(document).ready(()=>{
+
+        $("#b1").click(()=>{
+        let n = $("#n1").val()
+        //console.log(n)
+        let fact =1
+          for(let r=1;r<=n;r++)
+          {
+            fact = fact * r
+            $("#p1").text(`${fact}`)
+            
+          }
+
+     })
+     })
+    </script>
+
+</head>
+<body>
+<input type="number" id="n1" />
+<input type="button" value="show" id="b1" />
+<br>
+<p id="p1"> </p>
+</body>
+</html>

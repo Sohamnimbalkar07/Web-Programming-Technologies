@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+        function validate()
+    {
+        let s=document.getElementById("e1")
+        console.log(s.checkValidity())
+        if (s.checkValidity())
+        {
+            document.getElementById("p1").innerText="OK"
+        }
+        else
+        {
+            document.getElementById("p1").innerText=s.validationMessage
+        }
+
+        let d=document.getElementById("d1")
+        console.log(d.checkValidity())
+        if(d.checkValidity()){
+            document.getElementById("p2").innerText="ok"
+        }
+        else{
+            document.getElementById("p2").innerText=d.validateMessage
+        }
+
+        let p=document.getElementById("n1")
+        console.log(p.checkValidity())
+        if(p.checkValidity()){
+            document.getElementById("p3").innerText="ok"
+        }
+        else{
+            document.getElementById("p3").innerText=p.validateMessage
+        }
+        
+        
+    }
+</script>
+</head>
+<body>
+
+<input type="email" id="e1" />
+<p id="p1"></p>
+<input type="date" id="d1" min="2023-01-26" max="2023-08-15"/>
+<p id="p2"></p>
+<input type="number" id="n1" min="1" max="30"/>
+<p id="p3"></p>
+
+<input type="button" value="check" onclick="validate()" />
+</body>
+</html>

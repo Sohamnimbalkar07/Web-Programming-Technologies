@@ -1,0 +1,39 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script>
+
+    
+$(document).ready(function()
+{
+   
+    $("#t1").click(function(){
+
+        $("#p1").text("button click")
+
+    })
+
+    $("#t2").click(function(){
+        $("#p1").text("")
+    })
+
+
+    $("#t3").change(function(){
+    let s= $(this).val()
+    $("#p1").html("<i>"+s+"</i>")
+    })
+
+})
+    
+</script>
+
+</head>
+    
+    <body>
+        <input type="button" id="t1" value="OK"/>
+        <input type="button" id="t2" value="CLEAR"/>
+        <input type="text" id="t3" />
+        <p id="p1"></p>
+    </body>
+</html>

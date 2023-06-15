@@ -1,0 +1,44 @@
+<html>
+    <head>
+<script>
+var a=[]
+function f1()
+{
+   
+
+var e=document.getElementById("i1").value
+var b=parseInt(e)
+a.push(b)
+var e1=document.getElementById("p1")
+document.getElementById("p1").innerText=a
+console.log(a)
+
+}
+
+function f2()
+{
+var d=document.getElementById("i1").value
+var d1=document.getElementById("i2").value
+var b=parseInt(d)
+a.splice(d1,0,b)
+console.log(a)
+var p=document.getElementById("p1")
+p.innerText=a
+ 
+}
+
+</script>
+</head>  
+   
+        
+   
+<body>
+    <input type="number" value="enter the number" id="i1"/><br><br>
+    <input type="button" name="Final Array" onclick="f1()" value="append"></button>
+    <input type="number" value="enter the index" id="i2"/><br><br>
+    <input type="button" name="Final Array" onclick="f2()" value="Insert-at-index"></button>
+    <p id="p1"></p>
+
+</body>
+
+</html>

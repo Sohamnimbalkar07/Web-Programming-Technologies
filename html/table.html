@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+     $(document).ready(()=>{
+      
+        $("#b1").click(()=>{
+        let n = $("#n1").val()
+        let f = $("#f1").val()
+        let t = $("#t1").val()
+        $("#p1").text("");
+        console.log(n)
+          for(let r=f;r<=t;r++)
+          {
+            let t1= r*n
+            $("#p1").append(`${n} * ${r} = ${t1} <br>`)
+            //console.log(`${n} * ${r} = ${t1}`)
+            //console.log(${r} ,"*" ${n} ,"=" ,${t1})
+          }
+
+     })
+     })
+    </script>
+
+</head>
+<body>
+<input type="number" id="n1" />
+<input type="from" id="f1" />
+<input type="to" id="t1" />
+<input type="button"  value="click here" id="b1" />
+<br>
+<p id="p1"> </p>
+</body>
+</html>

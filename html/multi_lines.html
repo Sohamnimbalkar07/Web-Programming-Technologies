@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(()=>{
+            $("#n1").change(()=>{
+        
+            let n = $("#n1").val()
+            let str=$("#d1").text()
+            
+            let l =str.length
+            let d= l/n
+            let a=0
+            for(let i=1;i<=n;i++)
+            {
+               str1=""
+               str1=str.slice(a,d)
+               a=d
+               d=d+ l/n
+               console.log(str1)
+               $("#p1").append(`${str1} <br>`)
+
+            }
+            //console.log(d)
+            //console.log(l)
+            
+            })
+            })
+        </script>
+    </head>
+    <body>
+<input type="number" id="n1"/>
+<br>
+
+<div id="d1">this is some data which I want to split and divide in many lines this is a huge text . It is important to revise the concepts. regular revision is compulsary for winners.</div>
+<p id="p1"></p>
+</body>
+</html>
