@@ -1,0 +1,50 @@
+<html>
+    
+        <script>
+        function validation()
+            {     let namev , agev
+
+                  //get value of name using form
+                  let v = document.forms["form1"]["name"].value
+
+                  if (v.trim() =="" || v.length < 4 || !isNaN(v) )
+                  {
+                    alert("cannot enter name less than 4 characters")
+                    document.forms["form1"]["name"].focus()
+                    namev = false
+                  }
+                  else
+                  {
+                    namev = true
+                  }
+                  //get value of age using form
+                  let age = document.forms["form1"]["age"].value
+
+                  if(age <18)
+                  {
+                    alert("your age is below 18 years")
+                    document.forms["form1"]["age"].focus()
+                    agev=false
+                  }
+                  else
+                  {
+                    agev=true
+                  }
+                  //return result
+                  return namev && agev
+
+            }
+        
+        </script>
+    
+
+    <body>
+
+        <!-- if return not written then it redirect to next page even condition is true -->
+        <form name="form1" onsubmit="return validation()" action="..\html\calci.html" >
+        <input type="text" name="name" />
+        <input type="number" name="age" />
+        <input type="submit" value="submit" />
+        </form>
+    </body>
+</html>
